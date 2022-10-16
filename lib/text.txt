@@ -1,0 +1,63 @@
+let's create a simple todo app
+
+1) we will create the backened first.
+    - before doing that let's run our default code.
+    - let's create our todo model. it will be the blueprint of our todo.
+    - with that our todo model is complete.
+    - now let's create our database model and it's functions to insert, delete data.
+    - to use the database we need to import some packages to our project.
+    - a) sqflite, b) path
+    - execute the command 'flutter pub add sqflite' and 'flutter pub add path' in terminal
+    - now let's create our database model.
+    - now with that our database model is complete.
+    - now let's remove all the default code in main.dart and start from scratch.
+    - now let's add some dummie data to our database.
+    - import our models to main.dart
+    - create an object of database connect in our main.dart
+    - insert a sample todo in database and try to print it on console.
+    - now let's reinstall the app so everything is ready.
+    - we can see our sample todo in console.
+    - now that it works. let's create the UI widgets and functionalities.
+
+2) before we begin 
+    - at the time of recording this video the latest version of flutter is 2.5.1
+    - it has a habit of yelling at us for not using 'const' keyword before the constant widgets.
+    - so ignore the warnings and follow along. we will fix the warnings in the end.
+
+    - I will create our homepage in a separate file.
+    - we will create some widgets for the UI
+        - Userinput (where user will input the todo)
+        - Todocard (the todo blueprint for visual, checkbox and title stuff)
+        - todolist (it will contain the todocards)
+    - let's start
+    - add it to our homepage to see how it looks.
+    - let's do some modifying.
+    - let's create the todocard.
+    - add it to our homepage to see what's going on .
+    - now let's create our todolist. that will show data from our database.
+    - now let's add it to our homepage.
+    - remove the constant values from todocard.
+    - that's our sample data we saved in our database before.
+    - now we have to add functions for adding from userinput.
+    - now we have to pass functions to both widgets. (todolist, Userinput)
+    - the 'insertFunction(myTodo)' will lifted up and activate the 'addItem(Todo todo)' function.
+    - now it's working but, we have to add delete functions as well.
+    - the delete button is on todocard. so we have to lift the function of deletebutton to homepage where our functions are.
+        function will be passed down like this -
+        homepage -> todolist -> todocard
+    -   now our todolist have access to the addItem and deleteItem functions. now we can pass them to the todocard.
+    - but now todocard should tell the addItem and deleteItem functions that what does it want to change.
+    - now let's see it it works.
+    - now let's remove the sample data code from main.dart
+    - let's fix the warnings.
+    - with that we have a simple working todo app.
+
+    - that date doesn't look good. let's format that.
+    - to do that we have to add another package to our project. -> intl
+    - type 'flutter pub add intl' in terminal
+    - format that in where we show our data -> Todocard.
+    - looks good I think.
+
+    - I want to modify some things.
+
+    - alright that's it people. thanks for watching.
